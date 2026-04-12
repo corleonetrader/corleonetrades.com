@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Corleone Trades — Time & Price</title>
+<meta name="description" content="Corleone Trades — IPDA & ICT futures trading. NQ / ES intraday. 1:1 mentorship, methodology and funded account partnerships.">
+<link rel="canonical" href="https://corleonetrades.com/">
+
+<!-- favicons -->
+<link rel="icon" href="/assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/icon-512.png">
+<meta name="theme-color" content="#07070a">
+
+<!-- open graph / twitter -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Corleone Trades">
+<meta property="og:url" content="https://corleonetrades.com/">
+<meta property="og:title" content="Corleone Trades — Time & Price">
+<meta property="og:description" content="IPDA & ICT futures trading. NQ / ES intraday. 1:1 mentorship and funded account partnerships.">
+<meta property="og:image" content="https://corleonetrades.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Corleone_Trades">
+<meta name="twitter:creator" content="@Corleone_Trades">
+<meta name="twitter:title" content="Corleone Trades — Time & Price">
+<meta name="twitter:description" content="IPDA & ICT futures trading. NQ / ES intraday.">
+<meta name="twitter:image" content="https://corleonetrades.com/assets/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07070a; --bg-2:#0c0c10; --ink:#d1d4dc; --mute:#6b6e76;
+  --line:rgba(209,212,220,.09); --gold:#d1d4dc; --green:#448881;
+  --green-glow:rgba(68,136,129,.4);
+  --serif:"Cinzel",serif; --body:"Cormorant Garamond",serif; --ui:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.65;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+/* mystic backdrop */
+.backdrop{position:fixed;inset:0;z-index:-1;overflow:hidden;background:
+  radial-gradient(ellipse at 50% 0%,#12120f 0%,#07070a 55%,#050506 100%);}
+.backdrop svg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:min(160vh,1400px);opacity:.11;mix-blend-mode:screen;animation:rot 120s linear infinite}
+@keyframes rot{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.backdrop::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse at 50% 30%,transparent 0%,rgba(7,7,10,.6) 60%,#07070a 100%);}
+
+/* floating pill nav */
+header{position:fixed;top:22px;left:0;right:0;z-index:50;display:flex;justify-content:center;padding:0 20px;pointer-events:none}
+nav{pointer-events:auto;display:flex;align-items:center;gap:8px;padding:10px 14px 10px 18px;
+  background:rgba(12,12,16,.72);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border:1px solid rgba(209,212,220,.1);border-radius:100px;
+  box-shadow:0 10px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.04)}
+.brand-block{display:flex;align-items:center;gap:12px;padding-right:16px;border-right:1px solid var(--line);text-decoration:none}
+.brand-logo{width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(209,212,220,.15))}
+.brand-text{display:flex;flex-direction:column;line-height:1}
+.brand-text b{font-family:var(--serif);font-weight:500;font-size:15px;letter-spacing:.22em;color:var(--ink)}
+.brand-text i{font-family:var(--ui);font-style:normal;font-size:9px;letter-spacing:.35em;color:var(--mute);margin-top:4px}
+.navlinks{display:flex;gap:6px;padding:0 10px}
+.navlinks a{font-family:var(--ui);font-size:12px;letter-spacing:.08em;color:var(--mute);padding:10px 16px;border-radius:100px;transition:.25s}
+.navlinks a:hover{color:var(--ink);background:rgba(255,255,255,.04)}
+.nav-icons{display:flex;gap:6px;padding-left:8px;border-left:1px solid var(--line);margin-left:4px}
+.nav-icons a{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:50%;
+  border:1px solid var(--line);color:var(--mute);transition:.25s}
+.nav-icons a:hover{border-color:var(--green);color:var(--green)}
+.nav-icons svg{width:14px;height:14px;fill:currentColor}
+.cta{font-family:var(--ui);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  padding:12px 22px;background:var(--green);color:#fff;border-radius:100px;margin-left:4px;transition:.25s;border:1px solid var(--green)}
+.cta:hover{background:#55a099;border-color:#55a099;box-shadow:0 0 24px var(--green-glow)}
+@media(max-width:900px){.navlinks,.nav-icons{display:none}.brand-block{border-right:none;padding-right:8px}}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:140px 28px 100px;position:relative}
+.eyebrow{font-family:var(--ui);font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:28px}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(48px,9vw,128px);
+  letter-spacing:.04em;line-height:.95;margin-bottom:18px}
+.hero h1 .sub{display:block;font-size:.34em;letter-spacing:.55em;color:var(--ink);margin-top:18px;font-weight:400}
+.tagline{font-family:var(--body);font-style:italic;font-size:clamp(18px,2vw,24px);color:var(--mute);max-width:640px;margin:30px auto 0}
+.pillars{display:flex;gap:48px;justify-content:center;margin-top:56px;font-family:var(--serif);font-size:13px;letter-spacing:.3em;color:var(--mute)}
+.pillars span{position:relative}
+.pillars span::before{content:"✦";color:var(--gold);margin-right:14px;font-size:10px}
+.hero-cta{display:inline-flex;margin-top:64px;gap:18px;flex-wrap:wrap;justify-content:center}
+.btn{font-family:var(--ui);font-size:13px;letter-spacing:.2em;text-transform:uppercase;padding:18px 36px;border-radius:2px;transition:.3s;cursor:pointer;border:1px solid}
+.btn-primary{background:var(--green);border-color:var(--green);color:#fff;box-shadow:0 0 40px var(--green-glow)}
+.btn-primary:hover{background:#258a57;box-shadow:0 0 60px var(--green-glow)}
+.btn-ghost{border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+@media(max-width:600px){.pillars{gap:22px;flex-wrap:wrap}}
+
+/* sections */
+section{padding:130px 0;position:relative}
+.section-head{text-align:center;margin-bottom:80px}
+.kicker{font-family:var(--ui);font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.section-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5vw,58px);letter-spacing:.05em;line-height:1.1}
+.section-head p{color:var(--mute);max-width:620px;margin:22px auto 0;font-size:20px}
+
+/* methodology */
+.method-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;background:var(--line);border:1px solid var(--line)}
+.method-card{background:var(--bg);padding:44px 34px;transition:.4s}
+.method-card:hover{background:var(--bg-2)}
+.method-num{font-family:var(--serif);color:var(--gold);font-size:14px;letter-spacing:.25em;margin-bottom:22px}
+.method-card h3{font-family:var(--serif);font-weight:500;font-size:24px;letter-spacing:.04em;margin-bottom:14px}
+.method-card p{color:var(--mute);font-size:17px}
+
+/* mentorship */
+.mentor{display:grid;grid-template-columns:1.15fr .85fr;gap:80px;align-items:center}
+@media(max-width:900px){.mentor{grid-template-columns:1fr;gap:50px}}
+.mentor h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.5vw,54px);line-height:1.1;letter-spacing:.04em;margin-bottom:28px}
+.mentor p{color:var(--mute);margin-bottom:18px;font-size:19px}
+.mentor ul{list-style:none;margin:28px 0 38px}
+.mentor ul li{padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--ui);font-size:14px;letter-spacing:.04em}
+.mentor ul li::before{content:"✦";color:var(--gold);margin-right:14px}
+.price-card{background:linear-gradient(180deg,#0d0d11,#08080b);border:1px solid var(--line);padding:50px 44px;text-align:center;position:relative}
+.price-card::before{content:"";position:absolute;inset:0;border:1px solid transparent;background:linear-gradient(180deg,var(--gold),transparent) border-box;-webkit-mask:linear-gradient(#000,#000) padding-box,linear-gradient(#000,#000);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.4;pointer-events:none}
+.price-card .label{font-family:var(--ui);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.price-card h3{font-family:var(--serif);font-size:32px;margin:16px 0 10px;letter-spacing:.04em}
+.price-card .desc{color:var(--mute);font-size:17px;margin-bottom:34px}
+.price-card .btn{width:100%;display:block}
+
+/* tradeify card — inspired layout, corleone aesthetic */
+.tradeify{max-width:620px;margin:0 auto;position:relative;border-radius:14px;overflow:hidden;
+  background:linear-gradient(180deg,#0e0e12,#08080b);
+  border:1px solid rgba(68,136,129,.28);padding:44px 44px 40px;
+  box-shadow:0 0 0 1px rgba(68,136,129,.06),0 30px 80px -20px rgba(68,136,129,.18),inset 0 1px 0 rgba(255,255,255,.03)}
+.tradeify::before{content:"";position:absolute;inset:-1px;border-radius:14px;pointer-events:none;
+  background:linear-gradient(180deg,rgba(68,136,129,.5),transparent 40%);
+  -webkit-mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
+  -webkit-mask-composite:xor;mask-composite:exclude;padding:1px}
+.tradeify::after{content:"";position:absolute;top:-100px;left:-80px;width:320px;height:320px;
+  background:radial-gradient(circle,rgba(68,136,129,.22),transparent 65%);filter:blur(30px);pointer-events:none}
+.tf-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px;position:relative;z-index:1}
+.tf-icon{width:76px;height:76px;border-radius:16px;background:var(--green);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 40px rgba(68,136,129,.45),inset 0 1px 0 rgba(255,255,255,.25)}
+.tf-icon svg{width:46px;height:46px;fill:#07070a}
+.tf-code{display:inline-flex;align-items:center;gap:8px;font-family:var(--ui);font-size:11px;font-weight:600;letter-spacing:.2em;
+  padding:10px 16px;border-radius:100px;background:rgba(68,136,129,.12);border:1px solid rgba(68,136,129,.5);color:var(--green);cursor:pointer;transition:.25s}
+.tf-code:hover{background:rgba(68,136,129,.2)}
+.tf-code svg{width:12px;height:12px;fill:currentColor;opacity:.8}
+.tradeify h3{font-family:var(--serif);font-size:42px;letter-spacing:.02em;margin-bottom:10px;font-weight:500;position:relative;z-index:1}
+.tf-sub{font-family:var(--ui);font-size:14px;font-weight:600;letter-spacing:.02em;color:var(--ink);margin-bottom:18px;position:relative;z-index:1}
+.tf-desc{color:var(--mute);font-size:17px;line-height:1.6;margin-bottom:26px;position:relative;z-index:1;max-width:520px}
+.tf-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;position:relative;z-index:1}
+.tf-chip{font-family:var(--ui);font-size:12px;font-weight:500;letter-spacing:.02em;padding:10px 18px;
+  background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:100px;color:var(--ink)}
+.tf-cta{display:block;width:100%;text-align:center;font-family:var(--ui);font-size:14px;font-weight:600;letter-spacing:.08em;
+  padding:20px;background:var(--green);color:#07070a;border-radius:12px;position:relative;z-index:1;transition:.25s;
+  box-shadow:0 10px 30px rgba(68,136,129,.3),inset 0 1px 0 rgba(255,255,255,.25)}
+.tf-cta:hover{background:#55a099;transform:translateY(-2px);box-shadow:0 14px 40px rgba(68,136,129,.45)}
+@media(max-width:640px){.tradeify{padding:32px 26px}.tradeify h3{font-size:34px}.tf-icon{width:64px;height:64px}.tf-icon svg{width:38px;height:38px}}
+
+/* youtube */
+.yt-wrap{position:relative;padding-bottom:56.25%;height:0;border:1px solid var(--line);background:#000}
+.yt-wrap iframe{position:absolute;inset:0;width:100%;height:100%}
+
+/* form */
+.form-wrap{max-width:760px;margin:0 auto;background:linear-gradient(180deg,#0d0d11,#08080b);border:1px solid var(--line);padding:60px 54px}
+@media(max-width:600px){.form-wrap{padding:40px 28px}}
+.field{margin-bottom:26px}
+.field label{display:block;font-family:var(--ui);font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
+.field input,.field select,.field textarea{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);
+  padding:12px 0;color:var(--ink);font-family:var(--body);font-size:19px;outline:none;transition:.3s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.field textarea{resize:vertical;min-height:110px}
+.field select option{background:#0c0c10}
+.form-wrap .btn{width:100%;margin-top:18px}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:60px 0 50px;text-align:center;color:var(--mute);font-size:14px;font-family:var(--ui);letter-spacing:.08em}
+footer .fbrand{font-family:var(--serif);color:var(--ink);font-size:20px;letter-spacing:.3em;margin-bottom:12px}
+footer .socials{display:flex;gap:28px;justify-content:center;margin:22px 0}
+footer .socials a{letter-spacing:.2em;text-transform:uppercase;font-size:12px}
+footer .socials a:hover{color:var(--gold)}
+footer small{display:block;margin-top:24px;opacity:.6;font-size:11px;letter-spacing:.1em}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s,transform 1s}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="backdrop" aria-hidden="true">
+<svg viewBox="-200 -200 400 400" fill="none" stroke="#f5f2e8" stroke-width=".4">
+<circle r="180"/><circle r="160"/><circle r="140"/><circle r="120"/><circle r="100"/>
+<circle r="80"/><circle r="60"/><circle r="40"/><circle r="20"/>
+<g id="col">
+<circle cy="-160" r="28"/><circle cy="-120" r="28"/><circle cy="-80" r="28"/><circle cy="-40" r="28"/>
+<circle cy="0" r="28"/><circle cy="40" r="28"/><circle cy="80" r="28"/><circle cy="120" r="28"/><circle cy="160" r="28"/>
+<circle cy="-140" r="18"/><circle cy="-100" r="18"/><circle cy="-60" r="18"/><circle cy="-20" r="18"/>
+<circle cy="20" r="18"/><circle cy="60" r="18"/><circle cy="100" r="18"/><circle cy="140" r="18"/>
+</g>
+</svg>
+</div>
+
+<header>
+<nav>
+<a href="#" class="brand-block">
+<img src="/assets/corleone-mark.png" alt="Corleone Trades" class="brand-logo">
+<div class="brand-text"><b>CORLEONE</b><i>TRADES</i></div>
+</a>
+<div class="navlinks">
+<a href="#methodology">ICT Library</a>
+<a href="#partners">Prop Firms</a>
+<a href="#youtube">YouTube</a>
+</div>
+<div class="nav-icons">
+<a href="https://x.com/Corleone_Trades" target="_blank" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+<a href="https://youtube.com/@CorleoneTrader" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12z"/></svg></a>
+</div>
+<a href="https://whop.com/corleone-trades/1-on-1-private-call-81/" target="_blank" rel="noopener" class="cta">Book a Call</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="wrap">
+<div class="eyebrow">NQ · ES · Futures · Intraday</div>
+<h1>CORLEONE<span class="sub">TIME &amp; PRICE</span></h1>
+<p class="tagline">A disciplined approach to trading the NY session — built on IPDA, liquidity and pure price action.</p>
+<div class="pillars"><span>VIRTUS</span><span>LIBERTAS</span><span>DISCIPLINA</span></div>
+<div class="hero-cta">
+<a href="#apply" class="btn btn-primary">Apply for 1:1 Mentorship</a>
+<a href="https://whop.com/corleone-trades/1-on-1-private-call-81/" target="_blank" rel="noopener" class="btn btn-ghost">Book a 1:1 Call</a>
+</div>
+</div>
+</section>
+
+<section id="methodology">
+<div class="wrap">
+<div class="section-head reveal">
+<div class="kicker">The Framework</div>
+<h2>Methodology</h2>
+<p>Every decision flows from a single question: where is the draw on liquidity? The rest is patience.</p>
+</div>
+<div class="method-grid reveal">
+<div class="method-card"><div class="method-num">I · DOL</div><h3>Draw on Liquidity</h3><p>The north star of every setup. Define where price is magnetically pulled before entering any position.</p></div>
+<div class="method-card"><div class="method-num">II · SWEEP</div><h3>Liquidity Sweep</h3><p>Old highs, old lows, equal highs and lows — engineered liquidity is where smart money operates.</p></div>
+<div class="method-card"><div class="method-num">III · IFVG</div><h3>Inversion FVG</h3><p>The confirmation. A failed imbalance flips the narrative and offers the highest probability entry.</p></div>
+<div class="method-card"><div class="method-num">IV · DISPLACE</div><h3>Displacement</h3><p>Clean, aggressive delivery that prints the shift. No displacement, no trade.</p></div>
+<div class="method-card"><div class="method-num">V · ENTRY</div><h3>Precision Entry</h3><p>Stops defined by PD arrays — not feelings. Small risk, asymmetric reward, repeatable process.</p></div>
+<div class="method-card"><div class="method-num">VI · IPDA</div><h3>IPDA Dealing Range</h3><p>Context across 20/40/60 days. We trade within the algorithm's footprint, never against it.</p></div>
+</div>
+</div>
+</section>
+
+<section id="mentorship">
+<div class="wrap">
+<div class="mentor">
+<div class="reveal">
+<div class="kicker">1:1 Mentorship</div>
+<h2>Learn the method. Trade the method.</h2>
+<p>No recycled guru talk. No fake screenshots. A direct line to a consistently profitable futures trader — built around your execution, your weaknesses and your goals.</p>
+<ul>
+<li>Live 1:1 video calls on Whop</li>
+<li>Full IPDA / ICT framework walkthrough</li>
+<li>Trade review &amp; psychology coaching</li>
+<li>Custom plan for funded account execution</li>
+</ul>
+</div>
+<div class="price-card reveal">
+<div class="label">Private Session</div>
+<h3>1:1 Call</h3>
+<p class="desc">One hour. Direct. No fluff. Book through Whop.</p>
+<a href="https://whop.com/corleone-trades/1-on-1-private-call-81/" target="_blank" rel="noopener" class="btn btn-primary" id="whop-link">Book on Whop</a>
+<p style="margin-top:22px;font-size:14px;color:var(--mute);font-family:var(--ui);letter-spacing:.1em">Prefer an ongoing program? <a href="#apply" style="color:var(--gold)">Apply below ↓</a></p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="partners">
+<div class="wrap">
+<div class="section-head reveal">
+<div class="kicker">Official Partner</div>
+<h2>Trade with Tradeify.</h2>
+<p>The only prop firm I personally trade with. Fast payouts, real capital, built for futures traders who take the game seriously.</p>
+</div>
+<div class="tradeify reveal">
+<div class="tf-top">
+<div class="tf-icon" aria-label="Tradeify">
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+<rect x="22" y="14" width="6" height="18" rx="1"/>
+<rect x="30" y="8" width="6" height="24" rx="1"/><line x1="31.5" y1="11" x2="34.5" y2="11" stroke="#07070a" stroke-width="1.2"/><line x1="31.5" y1="15" x2="34.5" y2="15" stroke="#07070a" stroke-width="1.2"/><line x1="31.5" y1="19" x2="34.5" y2="19" stroke="#07070a" stroke-width="1.2"/><line x1="31.5" y1="23" x2="34.5" y2="23" stroke="#07070a" stroke-width="1.2"/><line x1="31.5" y1="27" x2="34.5" y2="27" stroke="#07070a" stroke-width="1.2"/>
+<rect x="38" y="18" width="6" height="14" rx="1"/>
+<path d="M14 30 Q14 22 19 22 L19 42 Q19 48 24 50 L20 50 Q14 48 14 42 Z"/>
+<path d="M50 30 Q50 22 45 22 L45 42 Q45 48 40 50 L44 50 Q50 48 50 42 Z"/>
+</svg>
+</div>
+<button type="button" class="tf-code" id="tf-copy" title="Click to copy">
+<span id="tf-code-text">CODE: CORLEONE</span>
+<svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+</button>
+</div>
+<h3>Tradeify</h3>
+<div class="tf-sub">Instant Funding · No Delays</div>
+<p class="tf-desc">The only prop firm I trust with my capital. Skip the evaluation, trade real size from day one, and get paid fast. The infrastructure behind every NQ and ES trade I take.</p>
+<div class="tf-chips">
+<span class="tf-chip">Instant Funding</span>
+<span class="tf-chip">Fast Payouts</span>
+<span class="tf-chip">Built for Futures</span>
+<span class="tf-chip">Transparent Rules</span>
+</div>
+<a href="https://tradeify.co/?ref=2LMROY3S" target="_blank" rel="noopener" class="tf-cta">Get Funded with Tradeify →</a>
+</div>
+</div>
+</section>
+
+<section id="youtube">
+<div class="wrap">
+<div class="section-head reveal">
+<div class="kicker">Latest Breakdown</div>
+<h2>YouTube</h2>
+<p>Real trades. Real breakdowns. No edits that hide the truth.</p>
+</div>
+<div class="yt-wrap reveal">
+<iframe src="https://www.youtube.com/embed?listType=user_uploads&list=CorleoneTrader" title="Corleone Trades YouTube" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="text-align:center;margin-top:30px"><a href="https://youtube.com/@CorleoneTrader" target="_blank" class="btn btn-ghost">Subscribe on YouTube</a></p>
+</div>
+</section>
+
+<section id="apply">
+<div class="wrap">
+<div class="section-head reveal">
+<div class="kicker">Application</div>
+<h2>Apply for 1:1 Mentorship</h2>
+<p>Limited slots. This is for traders serious about committing to the process — not tourists looking for signals.</p>
+</div>
+<div class="form-wrap reveal">
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<div class="field"><label>Full Name</label><input name="name" required></div>
+<div class="field"><label>Email</label><input type="email" name="email" required></div>
+<div class="field"><label>X / Instagram Handle</label><input name="handle" placeholder="@yourhandle"></div>
+<div class="field"><label>Trading Experience</label>
+<select name="experience" required>
+<option value="">Select one…</option>
+<option>Less than 6 months</option>
+<option>6–12 months</option>
+<option>1–2 years</option>
+<option>2+ years</option>
+</select></div>
+<div class="field"><label>Are You Currently Funded?</label>
+<select name="funded" required>
+<option value="">Select one…</option>
+<option>Yes — actively trading funded accounts</option>
+<option>In evaluation phase</option>
+<option>Not yet</option>
+</select></div>
+<div class="field"><label>What Do You Want to Achieve?</label><textarea name="goals" required placeholder="Tell me where you are and where you want to go."></textarea></div>
+<button type="submit" class="btn btn-primary">Submit Application</button>
+</form>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="fbrand">CORLEONE TRADES</div>
+<div style="font-style:italic;color:var(--mute)">Virtus · Libertas · Disciplina</div>
+<div class="socials">
+<a href="https://x.com/Corleone_Trades" target="_blank">X / Twitter</a>
+<a href="https://youtube.com/@CorleoneTrader" target="_blank">YouTube</a>
+<a href="#apply">Mentorship</a>
+</div>
+<small>© <span id="yr"></span> Corleone Trades — Futures trading involves substantial risk. Past performance is not indicative of future results. Nothing on this site constitutes financial advice.</small>
+</div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const tfBtn=document.getElementById('tf-copy');
+if(tfBtn){tfBtn.addEventListener('click',()=>{
+  navigator.clipboard.writeText('CORLEONE');
+  const t=document.getElementById('tf-code-text');const o=t.textContent;
+  t.textContent='COPIED ✓';setTimeout(()=>t.textContent=o,1600);
+});}
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
